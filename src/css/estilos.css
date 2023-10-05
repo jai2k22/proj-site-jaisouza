@@ -1,0 +1,93 @@
+body {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+main .projetos {
+    display: none;
+    height: 100vh;  
+}
+
+main .projetos.selecionado {
+    display: block;
+}
+
+main .projetos .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+}
+
+main::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        background: linear-gradient(-235deg, #120118 25%, rgba(0, 0, 0, 0) 55%) no-repeat;
+}
+
+.conteudo {  
+    position: absolute;
+    top: 0;
+    left: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .nome-game {
+    color: rgb(255, 255, 255);
+    font-size: 42px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao {
+    color: rgb(134, 88, 255);
+    font-family: "Rubik";
+    margin-bottom: 24px;
+}
+
+.conteudo .logo {
+    background-image: url("../images/one-piece-logo.png");
+    background-size: cover;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10%;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: rgba(60, 14, 95, 0.3);
+}
+
+.botoes .botao {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.botoes .botao img {
+    border-radius: 40%;   
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.0);
+    box-shadow: 0 0 40px #8658ff;
+    border-radius: 40%;   
+}
